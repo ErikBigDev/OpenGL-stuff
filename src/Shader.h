@@ -1,10 +1,12 @@
 #pragma once
 
-#include <string>
 #include <GL/glew.h>
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <unordered_map>
+
+#include "glm/glm.hpp"
 
 class Shader
 {
@@ -24,6 +26,17 @@ public:
 	void SetUniform3f(const std::string& name, float v0, float v1, float v2);
 	void SetUniform2f(const std::string& name, float v0, float v1);
 	void SetUniform1f(const std::string& name, float v0);
+
+	void SetUniform1i(const std::string& name, int v0);
+	void SetUniform2i(const std::string& name, int v0, int v1);
+	void SetUniform3i(const std::string& name, int v0, int v1, int v2);
+	void SetUniform4i(const std::string& name, int v0, int v1, int v2, int v3);
+
+	//void SetUniformMat2f(const std::string& name, float v0, float v1);
+	//void SetUniformMat3f(const std::string& name, float v0, float v1, float v2);
+	//void SetUniformMat4f(const std::string& name, float v0, float v1, float v2, float v3);
+
+	void SetUniformMat4f(const std::string& name, const glm::mat4& matrix);
 private:
 	int GetUniformLocation(const std::string& name);
 	unsigned int CompileShader(unsigned int type, const std::string& source);

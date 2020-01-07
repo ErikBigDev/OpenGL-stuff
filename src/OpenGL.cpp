@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 #include "Renderer.h"
 #include "VertexBuffer.h"
@@ -11,6 +12,9 @@
 #include "VertexArray.h"
 #include "VertexBufferLayout.h"
 #include "Shader.h"
+#include "Texture.h"
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 #define ASSERT(x) if (!(x)) __debugbreak();
 
@@ -83,12 +87,12 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
+	//glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);
 	//glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
 
 
 	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(640, 480, "OpenGL", NULL, NULL);
+	window = glfwCreateWindow(960, 540, "OpenGL", NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate();
@@ -108,13 +112,18 @@ int main()
 
 	glEnable(GL_DEBUG_OUTPUT);
 	glDebugMessageCallback(MessageCallback, NULL);
+
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glBlendEquation(GL_FUNC_ADD);
+
 	/////////////////////////////////////////////////////
 
 	float positions[] = {
-		-0.5f, -0.5f,
-		 0.5f, -0.5f,
-		 0.5f,  0.5f,
-		-0.5f,  0.5f
+		100.0f, 100.0f, 0.0f, 0.0f,
+		200.0f, 100.0f, 1.0f, 0.0f,
+		200.0f, 200.0f, 1.0f, 1.0f,
+		100.0f, 200.0f, 0.0f, 1.0f
 	};
 
 	unsigned int indices[] = {
@@ -123,22 +132,25 @@ int main()
 	};
 
 	VertexArray va;
-	VertexBuffer vb(positions, 4 * 2 * sizeof(float));
+	VertexBuffer vb(positions, 4 * 4 * sizeof(float));
 	VertexBufferLayout layout;
 
 	va.AddBuffer(vb, layout);
 	layout.Push<float>(2);
+	layout.Push<float>(2);
 	va.AddBuffer(vb, layout);
 
-	//glEnableVertexAttribArray(0);
-	//glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
-
 	IndexBuffer ib(indices, 6);
+
+	glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
 
 	Shader shader("res/shaders/Basic.vert", "res/shaders/Basic.frag");
 	shader.Bind();
 
-	//shader.SetUniform4f("u_Color", 1.0f, 1.0f, 0.0f, 1.0f);
+	Texture texture("res/textures/assasin.png");
+	texture.Bind();
+	shader.SetUniform1i("u_Texture", 0);
+	shader.SetUniformMat4f("u_MVP", proj);
 
 	va.Unbind();
 	shader.Unbind();
@@ -147,7 +159,6 @@ int main()
 
 	Renderer renderer;
 
-	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
@@ -155,7 +166,6 @@ int main()
 
 		renderer.Draw(va, ib, shader);
 		
-		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
 
 		/* Poll for and process events */

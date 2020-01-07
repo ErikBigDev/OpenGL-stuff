@@ -12,17 +12,27 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00353170 -il C:\\Users\\lenov\\AppData\\Local\\Temp\\_CL_ee8bd400ast -typedil -f src\\IndexBuffer.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -ZB64 -D_INTEGRAL_MAX_BITS=64 -pc \\:/ -D_MSC_VER=1923 -D_MSC_FULL_VER=192328107 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I D:\\dev\\OpenGL\\Dependencies\\GLFW\\include\\ -I D:\\dev\\OpenGL\\Dependencies\\GLEW\\include\\ -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DGLEW_STATIC -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -std:c++17 -FoD:\\dev\\OpenGL\\intermediate\\Debug-x64\\IndexBuffer.obj -FdD:\\dev\\OpenGL\\intermediate\\Debug-x64\\vc142.pdb -Gd -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:projectdirectory D:\\dev\\OpenGL -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.7.2\\Include\\um"
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00EF3170 -il C:\\Users\\lenov\\AppData\\Local\\Temp\\_CL_c277d1cdast -typedil -f src\\IndexBuffer.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -ZB64 -D_INTEGRAL_MAX_BITS=64 -pc \\:/ -D_MSC_VER=1923 -D_MSC_FULL_VER=192328107 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I D:\\dev\\OpenGL\\Dependencies\\GLFW\\include\\ -I D:\\dev\\OpenGL\\Dependencies\\GLEW\\include\\ -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DGLEW_STATIC -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -std:c++17 -FoD:\\dev\\OpenGL\\intermediate\\Debug-x64\\IndexBuffer.obj -FdD:\\dev\\OpenGL\\intermediate\\Debug-x64\\vc142.pdb -Gd -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:projectdirectory D:\\dev\\OpenGL -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.23.28105\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.7.2\\Include\\um"
         }
       ],
       "files": {
-        "file:///d:/dev/opengl/src/vertexbuffer.cpp": {
+        "file:///d:/dev/opengl/src/vertexbufferlayout.h": {
+          "roles": [
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/vertexarray.cpp": {
           "roles": [
             "analysisTarget",
             "resultFile"
           ]
         },
-        "file:///d:/dev/opengl/dependencies/glew/include/gl/glew.h": {
+        "file:///d:/dev/opengl/src/shader.h": {
+          "roles": [
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/vertexarray.h": {
           "roles": [
             "resultFile"
           ]
@@ -37,9 +47,41 @@
             "resultFile"
           ]
         },
-        "file:///d:/dev/opengl/src/indexbuffer.cpp": {
+        "file:///d:/dev/opengl/dependencies/glew/include/gl/glew.h": {
+          "roles": [
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/indexbuffer.h": {
+          "roles": [
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/vertexbuffer.cpp": {
           "roles": [
             "analysisTarget",
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/vendor/stb_image/stb_image.cpp": {
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/vendor/stb_image/stb_image.h": {
+          "roles": [
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/src/opengl.cpp": {
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ]
+        },
+        "file:///d:/dev/opengl/dependencies/glfw/include/glfw/glfw3.h": {
+          "roles": [
             "resultFile"
           ]
         },
@@ -49,8 +91,9 @@
             "resultFile"
           ]
         },
-        "file:///d:/dev/opengl/src/indexbuffer.h": {
+        "file:///d:/dev/opengl/src/indexbuffer.cpp": {
           "roles": [
+            "analysisTarget",
             "resultFile"
           ]
         }
